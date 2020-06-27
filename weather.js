@@ -49,10 +49,14 @@ function getWeather(lat, lon) {
         const feelingTemp = Math.round(json.main.feels_like);
         const tempMax = Math.round(json.main.temp_max);
         const tempMin = Math.round(json.main.temp_min);
-        
-        temperatureText.innerText = `${temp}º`;
-        cityText.innerText = `${place}`;
-        minMaxText.innerText = `최고 ${tempMax}º / 최저 ${tempMin}º`;
+
+        if (temp == null) {
+            temperatureText.innerText = `불러올 수 없음`;
+        } else {
+            temperatureText.innerText = `${temp}º`;
+            cityText.innerText = `${place}`;
+            minMaxText.innerText = `최고 ${tempMax}º / 최저 ${tempMin}º`;
+        }
     });
 }
 
