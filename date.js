@@ -23,7 +23,9 @@ function renderDate(month, day, date, hour, minute) {
     if (hour > 12) {
         hoursIn12 = hour - 12;
     } else if (hour == 0) {
-        hoursIn12 = 12
+        hoursIn12 = 12;
+    } else {
+        hoursIn12 = hour;
     }
 
     dateText.innerText = `${month}월 ${date}일 ${dayString}요일 ${hoursIn12}:${minute < 10 ? `0${minute}` : minute}`;
@@ -41,7 +43,7 @@ function getDate() {
 
 function init() {
     getDate();
-    setInterval(getDate, 50);
+    setInterval(getDate, 500);
 }
 
 init();
