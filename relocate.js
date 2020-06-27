@@ -1,8 +1,9 @@
 const relocateBtn = document.querySelector("#relocate-button");
 
 function handleRelocateClick() {
-    askForCoords();
-    clickAmount = 0;
+    localStorage.removeItem("coords");
+    cityText.innerText = "";
+    loadCoords();
 }
 
 function init() {

@@ -11,7 +11,7 @@ function handleGeoError() {
     temperatureText.innerText = "불러올 수 없음";
     minMaxText.innerText = "날씨 정보를 확인하려면 이 텍스트를 눌러 위치 정보 사용을 허용해주세요.";
     minMaxText.classList.add("button");
-    minMaxText.addEventListener("click", askForCoords);
+    minMaxText.addEventListener("click", loadCoords);
 }
 
 function handleGeoSuccess(coordinates) {
@@ -31,9 +31,9 @@ function askForCoords() {
 function loadCoords() {
     const loadedCoords = localStorage.getItem(COORDS);
     if(loadedCoords == null) {
-        askForCoords();
         temperatureText.innerText = "위치 정보 사용을 허용해주세요.";
         minMaxText.innerText = "위치 정보 사용을 허용하지 않으면 날씨 정보를 표시할 수 없습니다.";
+        askForCoords();
     } else {
         const parsedCoords = JSON.parse(loadedCoords);
         getWeather(parsedCoords.latitude, parsedCoords.longitude);

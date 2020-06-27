@@ -130,13 +130,9 @@ footer {
     color: #3498db;
 }
 
-#close-settingsBtn {
-    color: white;
-}
-
 #relocate-button {
     color: rgb(128, 128, 128);
-    padding-top: 3rem;
+    display: inline;
 }
 
 @keyframes fadeIn {

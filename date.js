@@ -3,6 +3,8 @@ const dateText = document.querySelector(".js-date");
 function renderDate(month, day, date, hour, minute) {
     let dayString = "?";
     switch (day) {
+        case 0:
+            dayString = "일"; break;
         case 1:
             dayString = "월"; break;
         case 2:
@@ -15,13 +17,13 @@ function renderDate(month, day, date, hour, minute) {
             dayString = "금"; break;
         case 6:
             dayString = "토"; break;
-        case 0:
-            dayString = "일"; break;
     }
 
     let hoursIn12 = 0;
     if (hour > 12) {
         hoursIn12 = hour - 12;
+    } else if (hour == 0) {
+        hoursIn12 = 12
     }
 
     dateText.innerText = `${month}월 ${date}일 ${dayString}요일 ${hoursIn12}:${minute < 10 ? `0${minute}` : minute}`;
