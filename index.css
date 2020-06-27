@@ -97,7 +97,7 @@ footer {
     left: 25%;
     top: 25%;
     padding: 20px;
-    padding-bottom: 50px;
+    padding-left: 35px;
     overflow: auto;
     max-height: 50%;
     border-radius: 20px;
@@ -131,6 +131,11 @@ footer {
 
 #close-settingsBtn {
     color: white;
+}
+
+#relocate-button {
+    color: rgb(128, 128, 128);
+    padding-top: 3rem;
 }
 
 @keyframes fadeIn {

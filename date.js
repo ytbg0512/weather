@@ -15,7 +15,7 @@ function renderDate(month, day, date, hour, minute) {
             dayString = "금"; break;
         case 6:
             dayString = "토"; break;
-        case 7:
+        case 0:
             dayString = "일"; break;
     }
 

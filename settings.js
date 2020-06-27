@@ -26,6 +26,8 @@ function closeSettings() {
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 27) {
         closeSettings();
+    } else if(event.keyCode == 120) {
+        openSettings();
     }
 });
 

@@ -13,27 +13,33 @@
             <div id="minMax" class="weatherText"></div>
             <div id="cityText" class="weatherText"></div>
         </div>
-        <div id="open-settingsBtn" class="leftBottom-button button">설정</div>
+        <div id="open-settingsBtn" class="leftBottom-button button">설정 F9</div>
         
         <div class="modal hidden"></div>
 
         <div id="settings" class="modal-content hidden">
             <span id="close-settingsBtn" class="leftBottom-button button">닫기 ESC</span>
             <h2 class="popup-text">설정</h2><br />
+
             <h3 class="popup-text">화면 스타일</h3>
             <div class="popup-text">다크 모드 관련 설정을 변경합니다.</div><br /><br />
-            <div id="followSystem" class="popup-text button selected">시스템 설정에 따르기 (기본) ✔</div><br />
-            <div id="lightMode" class="popup-text button">항상 라이트 모드 사용</div><br />
-            <div id="darkMode" class="popup-text button">항상 다크 모드 사용</div><br />
+            <ul>
+                <div id="followSystem" class="popup-text button selected">시스템 설정에 따르기 (기본) ✔</div><br />
+                <div id="lightMode" class="popup-text button">항상 라이트 모드 사용</div><br />
+                <div id="darkMode" class="popup-text button">항상 다크 모드 사용</div><br />
+            </ul>
+
+            <div id="relocate-button" class="button">위치 재설정</div>
+
+            <footer class="button">Made with ❤ by ytbg0512</footer>
         </div>
 
-        <footer class="button">Made with ❤ by ytbg0512</footer>
 
         <script src="keys.js"></script>
         <script src="date.js"></script>
         <script src="weather.js"></script>
         <script src="settings.js"></script>
         <script src="displayMode.js"></script>
-        <script src="clickingAgainAndAgain.js"></script>
+        <script src="relocate.js"></script>
     </body>
 </html>
