@@ -2,20 +2,21 @@ const dateText = document.querySelector(".js-date");
 
 function renderDate(month, day, date, hour, minute) {
     let dayString = "?";
-    if (day == 1) {
-        dayString = "월";
-    } else if (day == 2) {
-        dayString = "화";
-    } else if (day == 3) {
-        dayString = "수";
-    } else if (day == 4) {
-        dayString = "목";
-    } else if (day == 5) {
-        dayString = "금";
-    } else if (day == 6) {
-        dayString = "토";
-    } else if (day == 7) {
-        dayString = "일";
+    switch (day) {
+        case 1:
+            dayString = "월"; break;
+        case 2:
+            dayString = "화"; break;
+        case 3:
+            dayString = "수"; break;
+        case 4:
+            dayString = "목"; break;
+        case 5:
+            dayString = "금"; break;
+        case 6:
+            dayString = "토"; break;
+        case 7:
+            dayString = "일"; break;
     }
 
     let hoursIn12 = 0;
