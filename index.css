@@ -4,12 +4,15 @@ body {
     text-align: center;
     font-family: 'Montserrat','Noto Sans KR', sans-serif;
     animation: fadeIn .5s linear;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 h1 {
     font-size: 12rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
     margin-top: 2.5cm;
+    line-height: 11rem;
 }
 
 h3 {
@@ -17,6 +20,20 @@ h3 {
     margin-top: 0rem;
     padding-top: 0px;
     margin-bottom: 0px;
+}
+
+.button {
+    display: inline;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: .3s linear;
+    color: rgb(128, 128, 128);
+}
+
+.button:active {
+    color: #273c75;
 }
 
 .light {

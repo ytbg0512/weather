@@ -8,7 +8,10 @@ const minMaxText = weatherContainer.querySelector("#minMax");
 const COORDS = "coords";
 
 function handleGeoError() {
-    alert("위치 정보를 가져올 수 없습니다. 날씨 정보를 확인하려면 위치 정보 사용을 허용해주세요.");
+    temperatureText.innerText = "불러올 수 없음";
+    minMaxText.innerText = "날씨 정보를 확인하려면 이 텍스트를 눌러 위치 정보 사용을 허용해주세요.";
+    minMaxText.classList.add("button");
+    minMaxText.addEventListener("click", askForCoords);
 }
 
 function handleGeoSuccess(coordinates) {
@@ -17,6 +20,7 @@ function handleGeoSuccess(coordinates) {
         longitude: coordinates.coords.longitude
     }
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+    minMaxText.classList.remove("button");
     loadCoords();
 }
 
@@ -28,7 +32,8 @@ function loadCoords() {
     const loadedCoords = localStorage.getItem(COORDS);
     if(loadedCoords == null) {
         askForCoords();
-
+        temperatureText.innerText = "위치 정보 사용을 허용해주세요.";
+        minMaxText.innerText = "위치 정보 사용을 허용하지 않으면 날씨 정보를 표시할 수 없습니다.";
     } else {
         const parsedCoords = JSON.parse(loadedCoords);
         getWeather(parsedCoords.latitude, parsedCoords.longitude);
