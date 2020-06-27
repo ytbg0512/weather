@@ -16,7 +16,7 @@ function followSystem() {
     lightModeBtn.classList.remove("selected");
     darkModeBtn.classList.remove("selected");
 
-    followSystemBtn.innerText = "시스템 설정에 따르기 (기본) ✔";
+    followSystemBtn.innerText = "✔ 시스템 설정에 따르기 (기본)";
     lightModeBtn.innerText = "항상 라이트 모드 사용";
     darkModeBtn.innerText = "항상 다크 모드 사용";
 }
@@ -34,7 +34,7 @@ function changeToLight() {
     darkModeBtn.classList.remove("selected");
 
     followSystemBtn.innerText = "시스템 설정에 따르기 (기본)";
-    lightModeBtn.innerText = "항상 라이트 모드 사용 ✔";
+    lightModeBtn.innerText = "✔ 항상 라이트 모드 사용";
     darkModeBtn.innerText = "항상 다크 모드 사용";
 }
 
@@ -52,7 +52,7 @@ function changeToDark() {
     
     followSystemBtn.innerText = "시스템 설정에 따르기 (기본)";
     lightModeBtn.innerText = "항상 라이트 모드 사용";
-    darkModeBtn.innerText = "항상 다크 모드 사용 ✔";
+    darkModeBtn.innerText = "✔ 항상 다크 모드 사용";
 }
 
 function init() {
