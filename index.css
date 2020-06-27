@@ -23,6 +23,12 @@ h2 {
     font-size: 2rem;
 }
 
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+}
+
 .weatherText {
     font-weight: 400;
     margin-top: 0rem;
@@ -43,7 +49,6 @@ h2 {
 }
 
 .button {
-    display: inline;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -60,7 +65,7 @@ h2 {
 }
 
 .button:active {
-    color: #273c75;
+    color: #3498db;
 }
 
 .dark {

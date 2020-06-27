@@ -23,6 +23,12 @@ function closeSettings() {
     settingsBtn.style.display = "inline";
 }
 
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 27) {
+        closeSettings();
+    }
+});
+
 function init() {
     modal.addEventListener("click", closeSettings);
     settingsBtn.addEventListener("click", openSettings);
