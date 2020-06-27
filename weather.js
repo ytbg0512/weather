@@ -1,4 +1,4 @@
-const API_KEY = keys.API_KEY;
+const API_KEY = keys.WEATHER_API_KEY;
 
 const weatherContainer = document.querySelector(".js-weather");
 const temperatureText = weatherContainer.querySelector("h1");
