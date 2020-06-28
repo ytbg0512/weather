@@ -24,9 +24,9 @@ function closeSettings() {
 }
 
 document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 27) {
+    if(event.key == "Escape") {
         closeSettings();
-    } else if(event.keyCode == 120) {
+    } else if(event.key == "F9") {
         openSettings();
     }
 });
