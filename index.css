@@ -125,6 +125,7 @@ footer {
     text-align: left !important;
     line-height: .4rem;
     user-select: none;
+    transition: all 1s ease;
 }
 
 .selected {
@@ -169,5 +170,6 @@ input.search-bar:focus {
     .modal-content {
         background-color: rgb(35, 35, 40);
         color: #f5f6fa;
+        transition: color, background-color 1s ease;
     }
   }
