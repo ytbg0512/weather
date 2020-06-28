@@ -124,6 +124,7 @@ footer {
     display: block;
     text-align: left !important;
     line-height: .4rem;
+    user-select: none;
 }
 
 .selected {
