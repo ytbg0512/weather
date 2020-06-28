@@ -4,13 +4,17 @@ const followSystemBtn = document.querySelector("#followSystem");
 const lightModeBtn = document.querySelector("#lightMode");
 const darkModeBtn = document.querySelector("#darkMode");
 
+function savePreferredStyle(style) {
+    localStorage.setItem("preferredStyle", style);
+}
+
 function followSystem() {
     ui.classList.remove("light");
     ui.classList.remove("dark");
     popup.classList.remove("light");
     popup.classList.remove("dark");
 
-    localStorage.setItem("preferredStyle", "followSystem");
+    savePreferredStyle("followSystem");
 
     followSystemBtn.classList.add("selected");
     lightModeBtn.classList.remove("selected");
@@ -27,7 +31,7 @@ function changeToLight() {
     popup.classList.add("light");
     popup.classList.remove("dark");
 
-    localStorage.setItem("preferredStyle", "light");
+    savePreferredStyle("light");
 
     followSystemBtn.classList.remove("selected");
     lightModeBtn.classList.add("selected");
@@ -44,7 +48,7 @@ function changeToDark() {
     popup.classList.add("dark");
     popup.classList.remove("light");
 
-    localStorage.setItem("preferredStyle", "dark");
+    savePreferredStyle("dark");
 
     followSystemBtn.classList.remove("selected");
     lightModeBtn.classList.remove("selected");
