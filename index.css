@@ -181,10 +181,17 @@ input.search-bar:focus {
     body {
         background-color: rgb(35, 35, 40);
         color: #f5f6fa;
+        transition: color, background-color 1s ease;
     }
     .modal-content {
         background-color: rgb(35, 35, 40);
         color: #f5f6fa;
         transition: color, background-color 1s, opacity .2s ease;
+    }
+    .js-weather {
+        transition: color 1s ease;
+    }
+    .js-date {
+        transition: color 1s ease;
     }
   }
