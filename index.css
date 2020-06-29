@@ -57,11 +57,11 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition: color .1s linear;
+    transition: color 1s, opacity .2s ease !important;
 }
 
 .button:hover {
-    transition: color .1s linear;
+    transition: color .1s linear !important;
     color: rgb(128, 128, 128);
 }
 
@@ -126,7 +126,6 @@ footer {
     text-align: left !important;
     line-height: .4rem;
     user-select: none;
-    transition: color 1s, opacity .2s ease;
     text-indent: 10px;
 
 }
