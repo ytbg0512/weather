@@ -1,5 +1,3 @@
-const makerBtn = document.querySelector("#maker");
-
 let clickCount = 0;
 
 function runClickEvent() {
