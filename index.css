@@ -126,8 +126,8 @@ footer {
     text-align: left !important;
     line-height: .4rem;
     user-select: none;
+    transition: color 1s, opacity .2s ease;
     text-indent: 10px;
-
 }
 
 .selected {
