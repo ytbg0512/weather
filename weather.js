@@ -31,7 +31,7 @@ function askForCoords() {
 function loadCoords() {
     const loadedCoords = localStorage.getItem(COORDS);
     if(loadedCoords == null) {
-        temperatureText.innerText = "위치 정보 사용을 허용해주세요.";
+        temperatureText.innerText = "불러오는 중...";
         minMaxText.innerText = "위치 정보 사용을 허용하지 않으면 날씨 정보를 표시할 수 없습니다.";
         askForCoords();
     } else {
