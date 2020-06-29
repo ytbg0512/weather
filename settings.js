@@ -2,6 +2,7 @@ const modal = document.querySelector(".modal");
 const settingsPopup = document.querySelector("#settings");
 const settingsBtn = document.querySelector("#open-settingsBtn");
 const closeBtn = document.querySelector("#close-settingsBtn");
+const makerBtn = document.querySelector("#maker");
 
 function openSettings() {
     modal.classList.add("visible");
@@ -11,6 +12,10 @@ function openSettings() {
     modal.style.opacity = "0.7";
     settingsPopup.style.opacity = "1";
     settingsBtn.style.display = "none";
+    closeBtn.classList.add("visible");
+    closeBtn.classList.remove("hidden");
+    makerBtn.classList.add("visible");
+    makerBtn.classList.remove("hidden");
 }
 
 function closeSettings() {
@@ -21,6 +26,10 @@ function closeSettings() {
     modal.style.opacity = "0";
     settingsPopup.style.opacity = "0";
     settingsBtn.style.display = "inline";
+    closeBtn.classList.remove("visible");
+    closeBtn.classList.add("hidden");
+    makerBtn.classList.remove("visible");
+    makerBtn.classList.add("hidden");
 }
 
 document.addEventListener('keydown', function(event) {

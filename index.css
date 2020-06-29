@@ -44,7 +44,7 @@ footer {
 
 .leftBottom-button {
     text-align: right;
-    position: fixed;
+    position: fixed !important;
     bottom: 10px;
     right: 20px;
 }
@@ -95,17 +95,18 @@ footer {
     position: absolute;
     background-color: #f5f6fa;
     color: #2f3640;
-    left: 25%;
-    top: 25%;
     padding: 20px;
-    padding-left: 35px;
     overflow: auto;
     max-height: 50%;
     border-radius: 20px;
-    width: 50%;
+    width: 55%;
     z-index: 2;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     transition: color, background-color 1s, opacity .2s ease;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .visible {
@@ -126,6 +127,8 @@ footer {
     line-height: .4rem;
     user-select: none;
     transition: color 1s, opacity .2s ease;
+    text-indent: 10px;
+
 }
 
 .selected {
@@ -150,11 +153,19 @@ input.search-bar:focus {
 
 #relocate-button {
     color: rgb(128, 128, 128);
-    display: inline;
+    display: inline-block;
 }
 
 #github-button {
     color: rgb(128, 128, 128);
+}
+
+#close-settingsBtn {
+    z-index: 3;
+}
+
+#maker {
+    z-index: 3;
 }
 
 @keyframes fadeIn {
