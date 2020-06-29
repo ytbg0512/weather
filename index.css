@@ -153,6 +153,13 @@ input.search-bar:focus {
     display: inline;
 }
 
+#github-button {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
