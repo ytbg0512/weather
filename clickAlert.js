@@ -13,7 +13,6 @@ function runClickEvent() {
 
 function countClick() {
     clickCount = clickCount + 1;
-    console.log(clickCount);
     runClickEvent();
 }
 
