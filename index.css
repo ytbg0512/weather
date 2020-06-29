@@ -154,10 +154,7 @@ input.search-bar:focus {
 }
 
 #github-button {
-    position: fixed;
-    bottom: 10px;
-    left: 55rem;
-    right: 55rem;
+    color: rgb(128, 128, 128);
 }
 
 @keyframes fadeIn {
