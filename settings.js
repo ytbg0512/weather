@@ -3,6 +3,7 @@ const settingsPopup = document.querySelector("#settings");
 const settingsBtn = document.querySelector("#open-settingsBtn");
 const closeBtn = document.querySelector("#close-settingsBtn");
 const makerBtn = document.querySelector("#maker");
+const gitHubBtn = document.querySelector("#github-button");
 
 function openSettings() {
     modal.classList.add("visible");
@@ -16,6 +17,8 @@ function openSettings() {
     closeBtn.classList.remove("hidden");
     makerBtn.classList.add("visible");
     makerBtn.classList.remove("hidden");
+    gitHubBtn.classList.add("hidden");
+    gitHubBtn.classList.remove("visible");
 }
 
 function closeSettings() {
@@ -30,6 +33,8 @@ function closeSettings() {
     closeBtn.classList.add("hidden");
     makerBtn.classList.remove("visible");
     makerBtn.classList.add("hidden");
+    gitHubBtn.classList.add("visible");
+    gitHubBtn.classList.remove("hidden");
 }
 
 document.addEventListener('keydown', function(event) {
