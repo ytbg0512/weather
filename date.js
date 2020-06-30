@@ -1,7 +1,7 @@
 const dateText = document.querySelector(".js-date");
 
 function renderDate(month, day, date, hour, minute) {
-    let dayString = "?";
+    let dayString = "";
     switch (day) {
         case 0:
             dayString = "일"; break;
