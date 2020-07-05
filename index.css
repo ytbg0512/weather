@@ -194,3 +194,18 @@ input.search-bar:focus {
         transition: color 1s ease;
     }
 }
+
+@media (prefers-color-scheme: light) {
+    body {
+        transition: color, background-color 1s ease;
+    }
+    .modal-content {
+        transition: color, background-color 1s, opacity .2s ease;
+    }
+    .js-weather {
+        transition: color 1s ease;
+    }
+    .js-date {
+        transition: color 1s ease;
+    }
+}
