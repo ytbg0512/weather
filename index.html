@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>날씨</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css" />
-        <link rel="shortcut icon" href="favicon.ico" />
-    </head>
-    <body class="">
-        <span class="js-date">0월 0일 금요일 00:00</span>
-        <div class="js-weather">
-            <h1>--º</h1>
-            <div id="minMax" class="weatherText">최고 --º / 최저 --º</div>
-            <div id="cityText" class="weatherText">--</div>
+  <head>
+    <title>날씨</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body class="">
+    <span class="js-date">0월 0일 금요일 00:00</span>
+    <div class="js-weather">
+      <h1>--º</h1>
+      <div id="minMax" class="weatherText">최고 --º / 최저 --º</div>
+      <div id="cityText" class="weatherText">--</div>
+    </div>
+
+    <form class="js-searchForm">
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="Google 검색"
+        autofocus
+      />
+    </form>
+
+    <div id="open-settingsBtn" class="leftBottom-button button">설정 F9</div>
+
+    <div class="modal hidden"></div>
+
+    <div id="settings" class="modal-content hidden">
+      <h2 class="popup-text">설정</h2>
+      <br />
+
+      <h3 class="popup-text">화면 스타일</h3>
+      <div class="popup-text">
+        화면 스타일을 라이트와 다크 중에서 선택할 수 있습니다.
+      </div>
+      <br /><br />
+      <ul>
+        <div id="followSystem" class="popup-text button selected">
+          ✔ 시스템 설정에 따르기 (기본)
         </div>
-
-        <form class="js-searchForm">
-            <input type="text" class="search-bar" placeholder="Google 검색" autofocus />
-        </form>
-
-        <div id="open-settingsBtn" class="leftBottom-button button">설정 F9</div>
-        
-        <div class="modal hidden"></div>
-
-        <div id="settings" class="modal-content hidden">
-            <h2 class="popup-text">설정</h2><br />
-            
-            <h3 class="popup-text">화면 스타일</h3>
-            <div class="popup-text">화면 스타일을 라이트와 다크 중에서 선택할 수 있습니다.</div><br /><br />
-            <ul>
-                <div id="followSystem" class="popup-text button selected">✔ 시스템 설정에 따르기 (기본)</div><br />
-                <div id="lightMode" class="popup-text button">항상 라이트 모드 사용</div><br />
-                <div id="darkMode" class="popup-text button">항상 다크 모드 사용</div><br />
-            </ul>
-            
-            <div style="padding: 2rem"></div>
-            <span id="relocate-button" class="button">위치 재설정</span>
-            
+        <br />
+        <div id="lightMode" class="popup-text button">
+          항상 라이트 모드 사용
         </div>
-        <footer id="maker" class="button hidden">Made with ❤ by ytbg0512</footer>
-        <span id="close-settingsBtn" class="leftBottom-button button hidden">닫기 ESC</span>
-        <footer id="github-button" class="button">GitHub 페이지로 이동하기</footer>
+        <br />
+        <div id="darkMode" class="popup-text button">항상 다크 모드 사용</div>
+        <br />
+      </ul>
 
-        <script src="keys.js"></script>
-        <script src="date.js"></script>
-        <script src="weather.js"></script>
-        <script src="settings.js"></script>
-        <script src="displayMode.js"></script>
-        <script src="relocate.js"></script>
-        <script src="search.js"></script>
-        <script src="clickAlert.js"></script>
-        <script src="github.js"></script>
-    </body>
+      <div style="padding: 2rem;"></div>
+      <span id="relocate-button" class="button">위치 재설정</span>
+    </div>
+    <footer id="maker" class="button hidden">Made with ❤ by ytbg0512</footer>
+    <span id="close-settingsBtn" class="leftBottom-button button hidden"
+      >닫기 ESC</span
+    >
+    <footer id="github-button" class="button">GitHub 페이지로 이동하기</footer>
+
+    <script src="keys.js"></script>
+    <script src="date.js"></script>
+    <script src="weather.js"></script>
+    <script src="settings.js"></script>
+    <script src="displayMode.js"></script>
+    <script src="relocate.js"></script>
+    <script src="search.js"></script>
+    <script src="clickAlert.js"></script>
+    <script src="github.js"></script>
+  </body>
 </html>

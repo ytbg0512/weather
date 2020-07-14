@@ -5,73 +5,76 @@ const lightModeBtn = document.querySelector("#lightMode");
 const darkModeBtn = document.querySelector("#darkMode");
 
 function savePreferredStyle(style) {
-    localStorage.setItem("preferredStyle", style);
+  localStorage.setItem("preferredStyle", style);
 }
 
 function followSystem() {
-    ui.classList.remove("light");
-    ui.classList.remove("dark");
-    popup.classList.remove("light");
-    popup.classList.remove("dark");
+  ui.classList.remove("light");
+  ui.classList.remove("dark");
+  popup.classList.remove("light");
+  popup.classList.remove("dark");
 
-    savePreferredStyle("followSystem");
+  savePreferredStyle("followSystem");
 
-    followSystemBtn.classList.add("selected");
-    lightModeBtn.classList.remove("selected");
-    darkModeBtn.classList.remove("selected");
+  followSystemBtn.classList.add("selected");
+  lightModeBtn.classList.remove("selected");
+  darkModeBtn.classList.remove("selected");
 
-    followSystemBtn.innerText = "✔ 시스템 설정에 따르기 (기본)";
-    lightModeBtn.innerText = "항상 라이트 모드 사용";
-    darkModeBtn.innerText = "항상 다크 모드 사용";
+  followSystemBtn.innerText = "✔ 시스템 설정에 따르기 (기본)";
+  lightModeBtn.innerText = "항상 라이트 모드 사용";
+  darkModeBtn.innerText = "항상 다크 모드 사용";
 }
 
 function changeToLight() {
-    ui.classList.add("light");
-    ui.classList.remove("dark");
-    popup.classList.add("light");
-    popup.classList.remove("dark");
+  ui.classList.add("light");
+  ui.classList.remove("dark");
+  popup.classList.add("light");
+  popup.classList.remove("dark");
 
-    savePreferredStyle("light");
+  savePreferredStyle("light");
 
-    followSystemBtn.classList.remove("selected");
-    lightModeBtn.classList.add("selected");
-    darkModeBtn.classList.remove("selected");
+  followSystemBtn.classList.remove("selected");
+  lightModeBtn.classList.add("selected");
+  darkModeBtn.classList.remove("selected");
 
-    followSystemBtn.innerText = "시스템 설정에 따르기 (기본)";
-    lightModeBtn.innerText = "✔ 항상 라이트 모드 사용";
-    darkModeBtn.innerText = "항상 다크 모드 사용";
+  followSystemBtn.innerText = "시스템 설정에 따르기 (기본)";
+  lightModeBtn.innerText = "✔ 항상 라이트 모드 사용";
+  darkModeBtn.innerText = "항상 다크 모드 사용";
 }
 
 function changeToDark() {
-    ui.classList.add("dark");
-    ui.classList.remove("light");
-    popup.classList.add("dark");
-    popup.classList.remove("light");
+  ui.classList.add("dark");
+  ui.classList.remove("light");
+  popup.classList.add("dark");
+  popup.classList.remove("light");
 
-    savePreferredStyle("dark");
+  savePreferredStyle("dark");
 
-    followSystemBtn.classList.remove("selected");
-    lightModeBtn.classList.remove("selected");
-    darkModeBtn.classList.add("selected");
-    
-    followSystemBtn.innerText = "시스템 설정에 따르기 (기본)";
-    lightModeBtn.innerText = "항상 라이트 모드 사용";
-    darkModeBtn.innerText = "✔ 항상 다크 모드 사용";
+  followSystemBtn.classList.remove("selected");
+  lightModeBtn.classList.remove("selected");
+  darkModeBtn.classList.add("selected");
+
+  followSystemBtn.innerText = "시스템 설정에 따르기 (기본)";
+  lightModeBtn.innerText = "항상 라이트 모드 사용";
+  darkModeBtn.innerText = "✔ 항상 다크 모드 사용";
 }
 
 function init() {
-    followSystemBtn.addEventListener("click", followSystem);
-    lightModeBtn.addEventListener("click", changeToLight);
-    darkModeBtn.addEventListener("click", changeToDark);
-    const preferredStyle = localStorage.getItem("preferredStyle");
-    switch (preferredStyle) {
-        case "followSystem":
-            followSystem(); break;
-        case "light":
-            changeToLight(); break;
-        case "dark":
-            changeToDark(); break;
-    }
+  followSystemBtn.addEventListener("click", followSystem);
+  lightModeBtn.addEventListener("click", changeToLight);
+  darkModeBtn.addEventListener("click", changeToDark);
+  const preferredStyle = localStorage.getItem("preferredStyle");
+  switch (preferredStyle) {
+    case "followSystem":
+      followSystem();
+      break;
+    case "light":
+      changeToLight();
+      break;
+    case "dark":
+      changeToDark();
+      break;
+  }
 }
 
 init();

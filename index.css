@@ -1,211 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
 
 body {
-    text-align: center;
-    font-family: 'Montserrat','Noto Sans KR', sans-serif;
-    animation: fadeIn .7s ease;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-    background-color: #f5f6fa;
-    color: #2f3640;
-    transition: color, background-color 1s ease;
-    overflow: auto;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  animation: fadeIn 0.7s ease;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  transition: color, background-color 1s ease;
+  overflow: auto;
 }
 
 h1 {
-    font-size: 12rem;
-    margin-bottom: 1rem;
-    margin-top: 2.5cm;
-    line-height: 11rem;
+  font-size: 12rem;
+  margin-bottom: 1rem;
+  margin-top: 2.5cm;
+  line-height: 11rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 footer {
-    position: fixed;
-    bottom: 10px;
-    left: 20px;
-    color: white;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  color: white;
 }
 
 .weatherText {
-    font-weight: 400;
-    margin-top: 0rem;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 0rem;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.3rem;
 }
 
 .js-date {
-    display: inline;
+  display: inline;
 }
 
 .leftBottom-button {
-    text-align: right;
-    position: fixed !important;
-    bottom: 10px;
-    right: 20px;
+  text-align: right;
+  position: fixed !important;
+  bottom: 10px;
+  right: 20px;
 }
 
 .button {
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: color 1s, opacity .2s ease !important;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: color 1s, opacity 0.2s ease !important;
 }
 
 .button:hover {
-    transition: color .1s linear !important;
-    color: rgb(128, 128, 128);
+  transition: color 0.1s linear !important;
+  color: rgb(128, 128, 128);
 }
 
 .button:active {
-    color: #3498db;
+  color: #3498db;
 }
 
 .dark {
-    background-color: rgb(35, 35, 40) !important;
-    color: #f5f6fa !important;
+  background-color: rgb(35, 35, 40) !important;
+  color: #f5f6fa !important;
 }
 
 .light {
-    background-color: #f5f6fa !important;
-    color: #2f3640 !important;
+  background-color: #f5f6fa !important;
+  color: #2f3640 !important;
 }
 
 .modal {
-    visibility: hidden;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0.7);
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0.7);
 }
 
 .modal-content {
-    visibility: hidden;
-    position: absolute;
-    background-color: #f5f6fa;
-    color: #2f3640;
-    padding: 20px;
-    overflow: auto;
-    max-height: 50%;
-    border-radius: 20px;
-    width: 52%;
-    z-index: 2;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    transition: color, background-color 1s, opacity .2s ease;
-    text-align: center;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%);
+  visibility: hidden;
+  position: absolute;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  padding: 20px;
+  overflow: auto;
+  max-height: 50%;
+  border-radius: 20px;
+  width: 52%;
+  z-index: 2;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: color, background-color 1s, opacity 0.2s ease;
+  text-align: center;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
 }
 
 .visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity .5s ease;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s .2s, opacity .2s ease;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s ease;
 }
 
 .popup-text {
-    display: block;
-    text-align: left !important;
-    line-height: .4rem;
-    user-select: none;
-    transition: color 1s, opacity .2s ease;
-    text-indent: 10px;
+  display: block;
+  text-align: left !important;
+  line-height: 0.4rem;
+  user-select: none;
+  transition: color 1s, opacity 0.2s ease;
+  text-indent: 10px;
 }
 
 .selected {
-    color: #3498db;
+  color: #3498db;
 }
 
 input.search-bar {
-    font-family: inherit;
-    font-size: 1.2rem;
-    width: 30%;
-    height: 40px;
-    margin-top: 2rem;
-    border: none;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    text-indent: 1rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  width: 30%;
+  height: 40px;
+  margin-top: 2rem;
+  border: none;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  text-indent: 1rem;
 }
 
 input.search-bar:focus {
-    outline-width: 0;
+  outline-width: 0;
 }
 
 #relocate-button {
-    color: rgb(128, 128, 128);
-    display: inline-block;
+  color: rgb(128, 128, 128);
+  display: inline-block;
 }
 
 #github-button {
-    color: rgb(128, 128, 128);
+  color: rgb(128, 128, 128);
 }
 
 #close-settingsBtn {
-    z-index: 3;
+  z-index: 3;
 }
 
 #maker {
-    z-index: 3;
+  z-index: 3;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: rgb(35, 35, 40);
-        color: #f5f6fa;
-        transition: color, background-color 1s ease;
-    }
-    .modal-content {
-        background-color: rgb(35, 35, 40);
-        color: #f5f6fa;
-        transition: color, background-color 1s, opacity .2s ease;
-    }
-    .js-weather {
-        transition: color 1s ease;
-    }
-    .js-date {
-        transition: color 1s ease;
-    }
+  body {
+    background-color: rgb(35, 35, 40);
+    color: #f5f6fa;
+    transition: color, background-color 1s ease;
+  }
+  .modal-content {
+    background-color: rgb(35, 35, 40);
+    color: #f5f6fa;
+    transition: color, background-color 1s, opacity 0.2s ease;
+  }
+  .js-weather {
+    transition: color 1s ease;
+  }
+  .js-date {
+    transition: color 1s ease;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    body {
-        transition: color, background-color 1s ease;
-    }
-    .modal-content {
-        transition: color, background-color 1s, opacity .2s ease;
-    }
-    .js-weather {
-        transition: color 1s ease;
-    }
-    .js-date {
-        transition: color 1s ease;
-    }
+  body {
+    transition: color, background-color 1s ease;
+  }
+  .modal-content {
+    transition: color, background-color 1s, opacity 0.2s ease;
+  }
+  .js-weather {
+    transition: color 1s ease;
+  }
+  .js-date {
+    transition: color 1s ease;
+  }
 }
