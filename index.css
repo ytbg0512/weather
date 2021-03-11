@@ -161,6 +161,7 @@ input.search-bar:focus {
 
 #close-settingsBtn {
   z-index: 3;
+  color: white;
 }
 
 #maker {

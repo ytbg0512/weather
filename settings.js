@@ -4,6 +4,9 @@ const settingsBtn = document.querySelector("#open-settingsBtn");
 const closeBtn = document.querySelector("#close-settingsBtn");
 const makerBtn = document.querySelector("#maker");
 const gitHubBtn = document.querySelector("#github-button");
+const searchForm = document.getElementById("searchform");
+
+let preventKeyboardShortcut = true;
 
 function openSettings() {
   modal.classList.add("visible");
@@ -37,18 +40,30 @@ function closeSettings() {
   gitHubBtn.classList.remove("hidden");
 }
 
-document.addEventListener("keydown", function (event) {
-  if (event.key == "Escape") {
-    closeSettings();
-  } else if (event.key == "F9") {
-    openSettings();
-  }
-});
+function blockShortcut() {
+  preventKeyboardShortcut = true;
+}
+
+function allowShortcut() {
+  preventKeyboardShortcut = false;
+}
 
 function init() {
   modal.addEventListener("click", closeSettings);
   settingsBtn.addEventListener("click", openSettings);
   closeBtn.addEventListener("click", closeSettings);
+  searchForm.addEventListener("focusin", blockShortcut);
+  searchForm.addEventListener("focusout", allowShortcut);
+
+  document.addEventListener('keydown', (event) => {
+    if(preventKeyboardShortcut == false) {
+      if(event.code == "Escape") {
+        closeSettings();
+      } else if(event.code == "KeyS") {
+        openSettings();
+      }
+    }
+  });
 }
 
 init();
