@@ -61,7 +61,7 @@ function getWeather(lat, lon) {
       } else {
         temperatureText.innerText = `${temp}º`;
         cityText.innerText = `${place}`;
-        minMaxText.innerText = `최고 ${tempMax}º / 최저 ${tempMin}º`;
+        minMaxText.innerText = `최고 ${tempMax}º / 최저 ${tempMin}º / 체감 ${feelingTemp}º`;
       }
     });
 }
