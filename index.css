@@ -17,6 +17,8 @@ h1 {
   margin-bottom: 1rem;
   margin-top: 2.5cm;
   line-height: 11rem;
+  font-weight: 900;
+  letter-spacing: -0.33rem;
 }
 
 h2 {
